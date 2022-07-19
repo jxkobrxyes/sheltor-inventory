@@ -1,8 +1,8 @@
 const path = require('path');
 const fs = require('fs').promises;
 
-const db = require('./db');
-const Animals = require('./Pet');
+const db = require('./src/db');
+const Animals = require('../Pet');
 
 const seed = async () => {
     await db.sync({ force: true});
