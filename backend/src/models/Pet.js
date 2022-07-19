@@ -1,4 +1,4 @@
-const sequelize = require('./db');
+const sequelize = require('./backend/src/db');
 const { Sequelize } = require('sequelize');
 
 const Pet = sequelize.define('pet', {
