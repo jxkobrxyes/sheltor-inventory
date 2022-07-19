@@ -10,3 +10,5 @@ const Pet = sequelize.define('pet', {
     status: Sequelize.STRING,
     fee: Sequelize.INTEGER,
 })
+
+module.exports = Pet;
