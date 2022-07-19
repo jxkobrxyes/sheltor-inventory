@@ -2,20 +2,23 @@ const path = require('path');
 const fs = require('fs').promises;
 
 const db = require('./db');
-const Pet = require('./Pet');
+const Animals = require('./Pet');
 
 const seed = async () => {
     await db.sync({ force: true});
 
-    //Get path to external API location (json file)
+    //If server is not running then delete 'root' path
+    const animalsSeedPath = path.join(__dirname, 'root', 'animals.json');
 
-    //Asynchronously reads the content in the file
+    const animalsBuffer = await fs.readFile(animalsSeedPath);
 
-    //creates show and puts it into our show table
+    const animals = JSON.parse(String(animalsBuffer));
 
-    //The promise.all() method takes an iterable of promises as an input, and return a single promise that resolves to an array of the results of the input promises.
+    const animalsPromises = animals.map((animal) =>Animals.create(animal));
 
-    console.log('database info populated!');
+    await Promise.all(animalsPromises);
+
+    console.log('Animals database info populated!');
 }
 
 seed();
