@@ -8,7 +8,7 @@ const seed = async () => {
     await db.sync({ force: true});
 
     //If server is not running then delete 'root' path
-    const animalsSeedPath = path.join(__dirname, 'root', 'animals.json');
+    const animalsSeedPath = path.join(__dirname, 'animals.json');
 
     const animalsBuffer = await fs.readFile(animalsSeedPath);
 
