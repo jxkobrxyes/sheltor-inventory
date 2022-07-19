@@ -7,5 +7,6 @@ const Pet = sequelize.define('pet', {
     gender: Sequelize.STRING,
     image: Sequelize.STRING,
     description: Sequelize.STRING,
-
+    status: Sequelize.STRING,
+    fee: Sequelize.INTEGER,
 })
