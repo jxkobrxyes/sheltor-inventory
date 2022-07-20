@@ -1,7 +1,7 @@
 const sequelize = require('../db');
 const Pet = require('../models/Pet');
 const debug = require('debug')('app:controllers');
-const { validationResult } = require('express-validator');
+//const { validationResult } = require('express-validator');
 
 /**
  * @desc Gets all pets

@@ -6,7 +6,7 @@ const path = require('path');
 const sequelize = require('./src/db');
 
 ///Import routes from src/routes folder
-//const routes = require('./src/routes/index');
+const routes = require('./src/routes/index');
 
 //check database connection
 sequelize
@@ -23,13 +23,13 @@ sequelize
 const app = express();
 app.use(cors());
 
-app.use(express.json());
 app.use(express.static(path.join(__dirname, 'src', 'public'))); //public
+app.use(express.json());
 
 const port = 8080;
 
 //routes
-//app.use('/api', routes);
+app.use('/api', routes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
