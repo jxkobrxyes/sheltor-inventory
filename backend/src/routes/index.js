@@ -5,11 +5,12 @@ const Pet = require('../models/Pet');
 
 const router = express.Router();
 
-const { getAllPets, getPetById } = require('../controllers/index');
+const { getAllPets, getPetById, createPet } = require('../controllers/index');
 
 ///routes
 router.get('*/pets', getAllPets);
 router.get('/pets/:id', getPetById);
+router.post('/pets/create', createPet);
 
 
 module.exports = router;

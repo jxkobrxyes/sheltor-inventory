@@ -1,7 +1,7 @@
 const sequelize = require('../db');
 const Pet = require('../models/Pet');
 const debug = require('debug')('app:controllers');
-//const { validationResult } = require('express-validator');
+const { validationResult } = require('express-validator');
 
 /**
  * @desc Gets all pets
@@ -59,5 +59,34 @@ const debug = require('debug')('app:controllers');
         success: false,
         message: `Pet not found - Error: ${error.message}`,
       });
+    }
+  };
+
+  /**
+ * @desc Create single pet
+ * @route POST api/pets/create
+ * @access Private
+ */
+exports.createPet = async (req, res) => {
+    const errors = validationResult(req);
+  
+    if (!errors.isEmpty()) {
+      res.status(400).json({ success: false, error: errors.array() });
+    } else {
+      try {
+        const newPet = req.body;
+        const createdPet = await Pet.create(newPet); //added to db
+        res.status(200).json({
+          createdPet,
+          success: true,
+          message: 'Pet successfully created',
+        });
+      } catch (error) {
+        debug(error);
+        res.status(400).json({
+          success: false,
+          message: `Pet not created - Error: ${error.message}`,
+        });
+      }
     }
   };
