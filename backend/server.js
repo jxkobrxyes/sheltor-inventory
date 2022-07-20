@@ -5,16 +5,21 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
 const cors = require('cors');
+const debug = require('debug')('app:server');
+const colors = require('colors');
+const path = require('path');
+const sequelize = require('./src/db');
 
+///Import routes from src/routes folder
 const routes = require('./src/routes/index');
 
 //check database connection
 sequelize
   .authenticate()
-  .then((res) => debug(colors.blue.inverse("Database is connected")))
+  .then((res) => debug(colors.blue.inverse('Database is connected')))
   .catch((err) => {
     debug(
-      colors.red.inverse("There was an error connecting to the database"),
+      colors.red.inverse('There was an error connecting to the database'),
       err
     );
     process.exit(1); //NODE TERMINATE SERVER
@@ -23,20 +28,21 @@ sequelize
 const app = express();
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, 'src', 'public'))); //public
+app.use(express.json());
+
 if ((process.env.MODE = "development")) {
   app.use(morgan("dev"));
 }
 
-dotenv.config({ path: path.join(__dirname, "..", ".env") }); //find environment variables .env
-app.use(express.static(path.join(__dirname, "src", "public"))); //public
-app.use(express.json()); //server can speak in .json
+//routes
+app.use('/api', routes);
 
 //ROUTES
 app.use("/api", routes);
 
-const PORT = process.env.PORT;
+// let yo = 'this is the connection';
 
-const server = app.listen(PORT, () => {
-  debug(colors.rainbow(`Server is up and running on PORT: ${PORT}`));
-});
-   
+// app.get('/ayoo', (req, res) => {
+//     res.send(yo)
+// });

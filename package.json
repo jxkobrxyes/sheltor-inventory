@@ -8,9 +8,9 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "colors": "^1.4.0",
+    "concurrently": "^7.3.0",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
-    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
@@ -23,11 +23,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "client": "PORT=3005 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "DEBUG=app:* nodemon backend/server.js"
+    "data:import": "node backend/seeder.js",
+    "server": "DEBUG=app:* nodemon backend/server.js",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": [
