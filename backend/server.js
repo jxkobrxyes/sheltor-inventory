@@ -8,21 +8,35 @@ const cors = require('cors');
 
 const routes = require('./src/routes/index');
 
+//check database connection
+sequelize
+  .authenticate()
+  .then((res) => debug(colors.blue.inverse("Database is connected")))
+  .catch((err) => {
+    debug(
+      colors.red.inverse("There was an error connecting to the database"),
+      err
+    );
+    process.exit(1); //NODE TERMINATE SERVER
+  });
+
 const app = express();
-
 app.use(cors());
-app.use(express.json());
 
-const port = 8080;
+if ((process.env.MODE = "development")) {
+  app.use(morgan("dev"));
+}
 
+dotenv.config({ path: path.join(__dirname, "..", ".env") }); //find environment variables .env
+app.use(express.static(path.join(__dirname, "src", "public"))); //public
+app.use(express.json()); //server can speak in .json
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-});
+//ROUTES
+app.use("/api", routes);
 
-let yo = 'this is the connection';
+const PORT = process.env.PORT;
 
-app.get('/ayoo', (req, res) => {
-    res.send(yo)
+const server = app.listen(PORT, () => {
+  debug(colors.rainbow(`Server is up and running on PORT: ${PORT}`));
 });
    
