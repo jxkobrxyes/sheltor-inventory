@@ -29,3 +29,35 @@ const debug = require('debug')('app:controllers');
         .json({ success: false, message: ` - Error: ${error.message}` });
     }
   };
+
+/**
+ * @desc Get single product by id
+ * @route GET api/pets/:id
+ * @access Public
+ */
+ exports.getPetById = async (req, res) => {
+    const petId = req.params.id;
+  
+    try {
+      const pet = await Pet.findByPk(petId);
+  
+      if (!pet) {
+        res.status(400).json({
+          success: false,
+          message: 'Pet not found - check the product ID',
+        });
+      } else {
+        res.status(200).json({
+          pet,
+          success: true,
+          message: 'Pet returned successfully',
+        });
+      }
+    } catch (error) {
+      debug(error);
+      res.status(400).json({
+        success: false,
+        message: `Pet not found - Error: ${error.message}`,
+      });
+    }
+  };
