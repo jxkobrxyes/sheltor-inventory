@@ -1,5 +1,5 @@
 const sequelize = require('../db');
-const Product = require('../models/Pet');
+const Pet = require('../models/Pet');
 const debug = require('debug')('app:controllers');
 const { validationResult } = require('express-validator');
 
