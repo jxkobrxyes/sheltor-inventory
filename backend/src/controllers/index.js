@@ -61,3 +61,29 @@ const debug = require('debug')('app:controllers');
       });
     }
   };
+
+/**
+ * @desc Delete single product by id
+ * @route DELETE api/products/delete/:id
+ * @access Private
+ */
+ exports.deletePetById = async (req, res) => {
+  const petId = req.params.id;
+
+  try {
+    const petToDelete = await Pet.findByPk(petId);
+    const deletedPet = await petToDelete.destroy();
+
+    res.status(200).json({
+      deletedPet,
+      success: true,
+      message: 'Pet successfully deleted',
+    });
+  } catch (error) {
+    debug('Error: ', error);
+    res.status(400).json({
+      success: false,
+      message: `Unable to delete - Error: ${error.message}`,
+    });
+  }
+};

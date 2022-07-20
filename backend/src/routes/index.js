@@ -5,11 +5,11 @@ const Pet = require('../models/Pet');
 
 const router = express.Router();
 
-const { getAllPets, getPetById } = require('../controllers/index');
+const { getAllPets, getPetById, deletePetById } = require('../controllers/index');
 
 ///routes
 router.get('*/pets', getAllPets);
 router.get('/pets/:id', getPetById);
-
+router.delete('/pets/:id', deletePetById);
 
 module.exports = router;
