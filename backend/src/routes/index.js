@@ -1,8 +1,6 @@
 const express = require('express');
-
 const sequelize = require('../db');
-const Product = require('../models/Pet');
-
+const Pet = require('../models/Pet');
 const { check } = require('express-validator');
 
 const router = express.Router();
