@@ -117,3 +117,36 @@ exports.createPet = async (req, res) => {
     });
   }
 };
+
+/**
+ * @desc Update single pet by ID
+ * @route PUT api/pets/update/:id
+ * @access Private
+ */
+ exports.updatePet = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.status(400).json({ success: false, error: errors.array() });
+  } else {
+    const petId = req.params.id;
+    const updates = req.body;
+
+    try {
+      const petToUpdate = await Pet.findByPk(petId); //getting product to update
+
+      const updatedPet = await petToUpdate.update(updates);
+
+      res.status(200).json({
+        updatedPet,
+        success: true,
+        message: 'Pet updated successfully!',
+      });
+    } catch (error) {
+      debug(error);
+      res.status(400).json({
+        success: false,
+        message: `Unable to update - Error: ${error.message}`,
+      });
+    }
+  }
+};
