@@ -7,7 +7,7 @@ const router = express.Router();
 
 const { getAllPets, getPetById, createPet } = require('../controllers/index');
 
-///routes
+//routes
 router.get('*/pets', getAllPets);
 router.get('/pets/:id', getPetById);
 router.post('/pets/create', createPet);
