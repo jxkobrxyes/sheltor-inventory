@@ -25,6 +25,7 @@ sequelize
 const app = express();
 app.use(cors());
 
+//dotenv.config({ path: path.join(__dirname, '/Users/aochilov/Repos/sheltor-inventory/.env') }); //find environment variables .env
 app.use(express.static(path.join(__dirname, 'src', 'public'))); //public
 app.use(express.json());
 
@@ -35,7 +36,7 @@ if ((process.env.MODE = "development")) {
 //routes
 app.use('/api', routes);
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8000;
 
 const server = app.listen(PORT, () => {
   debug(colors.rainbow(`Server is up and running on PORT: ${PORT}`));

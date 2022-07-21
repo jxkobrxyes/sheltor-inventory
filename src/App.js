@@ -19,6 +19,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/pets/:id' element={<PetInfo/>} />
           <Route path='/pets/create' element={<CreatePet/>} />
+          <Route path='/pets/update/:id' element={<EditPet/>} />
         </Routes>
       </main>
     </Router>
