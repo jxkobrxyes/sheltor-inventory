@@ -5,9 +5,6 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
 const cors = require('cors');
-const debug = require('debug')('app:server');
-const colors = require('colors');
-const path = require('path');
 const sequelize = require('./src/db');
 
 ///Import routes from src/routes folder
@@ -38,11 +35,8 @@ if ((process.env.MODE = "development")) {
 //routes
 app.use('/api', routes);
 
-//ROUTES
-app.use("/api", routes);
+const PORT = 8080;
 
-// let yo = 'this is the connection';
-
-// app.get('/ayoo', (req, res) => {
-//     res.send(yo)
-// });
+const server = app.listen(PORT, () => {
+  debug(colors.rainbow(`Server is up and running on PORT: ${PORT}`));
+});
