@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Preston",
+    "ageYears": 3,
+    "gender": "male",
+    "image": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 45
+  },
+  {
+    "name": "Chester",
+    "ageYears": 2,
+    "gender": "male",
+    "image": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 135
+  },
+  {
+    "name": "Elsa",
+    "ageYears": 3,
+    "gender": "female",
+    "image": "https://images.pexels.com/photos/3616232/pexels-photo-3616232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 35
+  },
+  {
+    "name": "Lucy",
+    "ageYears": 6,
+    "gender": "female",
+    "image": "https://images.pexels.com/photos/3616232/pexels-photo-3616232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 15
+  },
+  {
+    "name": "Martin",
+    "ageYears": 3,
+    "gender": "male",
+    "image": "https://images.pexels.com/photos/2113368/pexels-photo-2113368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 20
+  },
+  {
+    "name": "Taylor",
+    "ageYears": 4,
+    "gender": "female",
+    "image": "https://images.pexels.com/photos/10492118/pexels-photo-10492118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 80
+  },
+  {
+    "name": "Amber",
+    "ageYears": 1,
+    "gender": "female",
+    "image": "https://images.pexels.com/photos/2686914/pexels-photo-2686914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 35
+  },
+  {
+    "name": "Salem",
+    "ageYears": 2,
+    "gender": "male",
+    "image": "https://images.pexels.com/photos/2930204/pexels-photo-2930204.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 70
+  },
+  {
+    "name": "Garfield",
+    "ageYears": 3,
+    "gender": "male",
+    "image": "https://images.pexels.com/photos/2034259/pexels-photo-2034259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 35
+  },
+  {
+    "name": "Twix",
+    "ageYears": 1,
+    "gender": "male",
+    "image": "https://images.pexels.com/photos/1754894/pexels-photo-1754894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Cute cat",
+    "status": "available",
+    "fee": 65
+  }
+]
