@@ -18,9 +18,11 @@ Full Stack application for cat adoptions.
 
 ## Setup
 
-cd ../sheltor-inventory
+```
+$ cd ../sheltor-inventory
 $ npm install
 $ npm start
+```
 
 ## Team
 
