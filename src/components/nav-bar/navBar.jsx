@@ -5,6 +5,7 @@ import './navBar.scss';
 const NavBar = () =>{
     return(
         <>
+        {/*  */}
             <nav className="navbar">
                 <div className="nav-container">
                     <img classname ='logo' src="/images/animal-shelter.png" alt="pet shelter" width={40} height={40}/>
