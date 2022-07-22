@@ -23,14 +23,18 @@ function Pets() {
     }, []);
 
     return (
-        
-          <div className="container">
+        <>
+        <h1 className="welcome">Welcome to Cats "R" Us</h1>
+        <h2 className="welcome">Adopt your new feline friend today!</h2>
+        <div className="container">
             {pets.length > 0
               ? pets.map((pet) => (
                   <Card key={pet.id} pet={pet} />
                 ))
               : 'Loading'}
           </div>
+        </>
+          
       );
 }
 
