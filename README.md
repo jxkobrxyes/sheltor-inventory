@@ -18,6 +18,7 @@ Full Stack application for cat adoptions.
 
 ## Setup
 
+To run this project, install it locally using npm:
 ```
 $ cd ../sheltor-inventory
 $ npm install
