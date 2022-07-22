@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=GFS+Didot&family=Rubik+Bubbles&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 .container {
   display: flex;
   justify-content: center;
@@ -17,10 +17,11 @@
   width: 23rem;
   height: 30rem;
   margin: 2rem 2rem;
-  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: "Mochiy Pop One", sans-serif;
   font-size: xx-large;
   background-color: #edb87e;
   box-shadow: 10px 15px 30px grey;
+  transition: 0.5s;
   .photo {
     height: 18rem;
     border-radius: 4rem;
@@ -28,9 +29,13 @@
     border: 1rem solid #ff921e;
   }
 }
+.card:hover {
+  transform: scale(1.1);
+  transition-timing-function: ease-in-out;
+}
 
-.welcome{
-    text-align: center;
-    font-family: 'Mochiy Pop One', sans-serif;
-    margin: 2rem;
+.welcome {
+  text-align: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  margin: 2rem;
 }
