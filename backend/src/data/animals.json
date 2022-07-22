@@ -12,7 +12,7 @@
     "name": "Chester",
     "ageYears": 2,
     "gender": "male",
-    "image": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+    "image": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Cute cat",
     "status": "available",
     "fee": 135
@@ -30,7 +30,7 @@
     "name": "Lucy",
     "ageYears": 6,
     "gender": "female",
-    "image": "https://images.pexels.com/photos/3616232/pexels-photo-3616232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "image": "https://images.pexels.com/photos/704588/pexels-photo-704588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Cute cat",
     "status": "available",
     "fee": 15
