@@ -118,7 +118,6 @@ exports.createPet = async (req, res) => {
   }
 };
 
-
 /**
  * @desc Update single pet by ID
  * @route PUT api/pets/update/:id
