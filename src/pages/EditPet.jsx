@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import Form from '../components/form'
+import Form from '../components/EditForm'
 
 function EditPet() {
 

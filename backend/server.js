@@ -7,7 +7,7 @@ const path = require('path');
 const cors = require('cors');
 const sequelize = require('./src/db');
 
-///Import routes from src/routes folder
+//Import routes from src/routes folder
 const routes = require('./src/routes/index');
 
 //check database connection
