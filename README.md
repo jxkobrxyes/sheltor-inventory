@@ -34,3 +34,10 @@ I also contributed to assisting with running seeders with Node JS and sequelize 
 - Christian Chavez
 
 ## Competencies
+| Job Function | Description |
+| --- | --- |
+| JF 1.5 | Can work effectively and contribute appropriately on a team to produce software |
+| JF 2.3 | Can develop effective user interfaces |
+| JF 2.5 | Can implement a responsive User Interface |
+| JF 3.2 | Can explain the principles and uses of relational and non-relational databases |
+| JF 3.6 | Can implement a RESTful API |
