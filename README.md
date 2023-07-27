@@ -1,11 +1,6 @@
 # Cats"R"Us
+## Overview
 
-Full Stack application for cat adoptions.
-
-## Table of contents
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Team](#team)
 
 ## Technologies
 
@@ -16,18 +11,11 @@ Full Stack application for cat adoptions.
 - Sequelize - version 6.21.3
 - mysql2 - version 2.3.3
 
-## Setup
-
-To run this project, install it locally using npm:
-```
-$ cd ../sheltor-inventory
-$ npm install
-$ npm start
-```
-
 ## Team
-
 - Sergio Herrera
 - Jakob Reyes
 - Azizbek Ochilov
 - Christian Chavez
+
+
+## Competencies
